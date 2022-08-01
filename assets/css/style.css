@@ -311,13 +311,6 @@ template {
   display: none;
 }
 
-/* ul */
-/* xl */
-/* lg */
-/* md */
-/* sm */
-/* xs */
-/* xx */
 .header-menu__container, .header-content__container {
   max-width: 1340px;
   margin: 0 auto;
@@ -325,6 +318,13 @@ template {
   padding-left: 20px;
 }
 
+/* ul */
+/* xl */
+/* lg */
+/* md */
+/* sm */
+/* xs */
+/* xx */
 *,
 *::before,
 *::after {

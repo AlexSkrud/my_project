@@ -1,3 +1,6 @@
+@use "../../presets/" as *;
+@use "../../mixins/" as *;
+
 .header {
   position: relative;
 
@@ -13,4 +16,3 @@
   background-position: center;
   background-size: cover;
 }
-
