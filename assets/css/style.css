@@ -629,16 +629,10 @@ a {
   .skills__container .skills__container {
     grid-auto-rows: 216.66667px;
   }
-  .skills__container {
-    grid-auto-rows: 216.66667px;
-  }
 }
 
 @media (min-hight: 691px) {
   .skills__container .skills__container {
-    grid-auto-rows: calc(33.33333vh - 13.33333px);
-  }
-  .skills__container {
     grid-auto-rows: calc(33.33333vh - 13.33333px);
   }
 }
