@@ -1,0 +1,33 @@
+// @use "../../presets/" as *;
+// @use "../../mixins/" as *;
+
+// .about {
+//   &__container {
+//     display: grid;
+//     grid-template-columns: ;
+//   }
+//   &__title {
+//     font-size: 2.5em;
+//     letter-spacing: 0.25em;
+//     line-height: 3em;
+//     color: $color-primary;
+//     font-weight: 700;
+//     font-family: "Roboto Slab";
+//   }
+//   &__text {
+//     padding: 200px 0 150px 300px;
+//     font-size: 18px;
+//     letter-spacing: 1px;
+//     line-height: 24px;
+//     color: $color-gray;
+//   }
+//   &__image {
+//     position: absolute;
+//     background-image: url(/my_project/assets/img/img-lamp-webdev.png);
+//   }
+//   &__overlay {
+//     background-color: $color-gray-light;
+//     @include abs-position;
+//     z-index: -1;
+//   }
+// }
