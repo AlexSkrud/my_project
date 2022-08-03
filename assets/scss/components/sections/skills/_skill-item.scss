@@ -29,6 +29,8 @@
   }
 
   &__image {
+    background-position: 100%;
+    background-size: cover;
     transition: transform 0.5s;
 
     @include abs-position;
