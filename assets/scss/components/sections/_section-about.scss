@@ -10,15 +10,12 @@
     display: grid;
     gap: 100px;
     grid-template-columns: 1fr 271px;
-    max-width: 1340px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
+    @extend %container;
   }
   &__content {
     font-size: 1.125rem;
-    letter-spacing: 0.0625rem;
-    line-height: 1.17;
+    letter-spacing: 0.055rem;
+    line-height: 1.145;
     color: $color-gray;
   }
 
@@ -32,7 +29,7 @@
 
   &__content p:first-of-type::after {
     position: absolute;
-    right: -60px;
+    right: -50px;
     top: 0;
     width: 2px;
     height: 200px;
@@ -45,6 +42,6 @@
     align-content: center;
     justify-items: right;
     max-width: 100%;
-    max-height: 480px;
+    max-height: 470px;
   }
 }

@@ -36,7 +36,14 @@ h2 {
 
   font-family: $font-header;
   line-height: 3rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.7rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  letter-spacing: 0.055rem;
+  font-weight: 700;
+  font-family: $font-header;
 }
 
 a {
