@@ -16,8 +16,9 @@
 
   &:hover,
   &:focus {
-    background-color: $color-accent;
     cursor: pointer;
+
+    background-color: $color-accent;
   }
 }
 
