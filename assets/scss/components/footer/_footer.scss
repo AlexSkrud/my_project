@@ -1,12 +1,16 @@
-@use "../../presets/" as *;
-@use "../../mixins/" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .footer {
-  padding: 50px 20px 70px;
+  padding: ($gap * 2.5) $gap ($gap * 3.5);
 
   text-align: center;
 
   background-color: $color-primary;
+
+  &__container {
+    @extend %container;
+  }
 
   &__social {
     position: relative;
@@ -14,56 +18,58 @@
     display: grid;
     justify-content: center;
 
-    margin-bottom: 40px;
+    margin-bottom: $gap-x2;
 
-    grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+
+    &::after {
+      position: absolute;
+      bottom: -$gap;
+      left: calc(50% - 75px / 2);
+
+      width: 75px;
+      height: 2px;
+
+      content: "";
+
+      background-color: rgba($color-light, 0.1);
+    }
+
+    a {
+      display: block;
+
+      padding: $gap-sm;
+
+      transition: color 0.5s;
+
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
+    }
+
+    .fab {
+      font-size: 36px;
+    }
   }
 
-  &__social::after {
-    position: absolute;
-    bottom: -19.5px;
-    left: calc(50% - 37.5px);
+  &__copy {
+    span {
+      &:nth-of-type(1) {
+        margin-right: -0.5em;
 
-    width: 75px;
-    height: 2px;
+        letter-spacing: 0.33em;
 
-    content: "";
+        font-weight: 100;
+      }
 
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+      &:nth-of-type(2) {
+        letter-spacing: 0.05em;
 
-  &__social-link {
-    display: block;
+        color: $color-gray-light;
 
-    padding: 10px;
-
-    transition: color 0.5s;
-  }
-  &__social a:hover,
-  &__social a:focus {
-    color: #d66926;
-  }
-
-  &__social .fab {
-    font-size: 36px;
-  }
-
-  &__copy span:nth-of-type(1) {
-    margin-right: -0.5em;
-
-    letter-spacing: 0.33em;
-
-    color: #637588;
-
-    font-weight: 100;
-  }
-
-  &__copy span:nth-of-type(2) {
-    letter-spacing: 0.05em;
-
-    color: #e5e5e5;
-
-    font-weight: 700;
+        font-weight: 700;
+      }
+    }
   }
 }

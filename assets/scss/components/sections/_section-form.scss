@@ -1,62 +1,80 @@
-@use "../../presets/" as *;
-@use "../../mixins/" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .form {
-  margin-bottom: 100px;
+  padding: $gap-lg 0;
 
   background-color: $color-primary;
 
   &__container {
     display: grid;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
-
     @extend %container;
     gap: $gap;
-    grid-template-columns: 1fr 1fr 1fr;
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  &-item__input {
+  .btn--primary {
+    width: 100%;
+
+    color: $color-light;
+    border-color: rgba($color-light, 0);
+    border-bottom-color: rgba($color-light, 0.2);
+    background-color: rgba($color-light, 0.1);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      border-color: $color-light;
+      background-color: $color-accent;
+    }
+  }
+}
+
+.form-item {
+  @include md-sm {
+    &:nth-of-type(1) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__input {
     display: block;
 
     width: 100%;
     height: 60px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: $gap-lg;
+    padding-left: $gap-lg;
 
+    transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
 
     color: $color-light;
-    border: 2px solid rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba($color-light, 0);
+    border-bottom-color: rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.05);
 
     font-size: 1.125rem;
 
     &::placeholder {
       color: $color-gray;
     }
+
     &:hover,
-    :focus {
-      border-color: rgba(255, 255, 255, 0.15);
+    &:focus {
+      border-color: rgba($color-light, 0.15);
       border-bottom-color: $color-light;
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba($color-light, 0.15);
+
+      &::placeholder {
+        color: lighten($color-gray, 15%);
+      }
     }
-  }
-}
-
-.form .btn--primary {
-  width: 100%;
-  height: 60px;
-
-  color: $color-light;
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.05);
-
-  &:hover,
-  :focus {
-    border-color: $color-light;
-    background-color: $color-accent;
   }
 }
