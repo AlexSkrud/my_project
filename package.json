@@ -1,7 +1,14 @@
 {
   "name": "gulp",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "scripts": {
+    "validate": "node --no-warnings actions/validator.js",
+    "editorconfig": "editorconfig-checker -exclude **/libs",
+    "all": "node --no-warnings actions/validator.js && editorconfig-checker -exclude **/libs"
+  },
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
@@ -15,6 +22,12 @@
     "gulp-sass": "^5.1.0",
     "postcss": "^8.4.5",
     "sass": "^1.47.0",
-    "sort-css-media-queries": "^2.0.4"
-  }
+    "sort-css-media-queries": "^2.0.4",
+     "chalk": "^5.0.1",
+    "editorconfig-checker": "^4.0.2",
+    "w3c-css-validator": "^1.3.0",
+    "w3c-html-validator": "^1.1.0"
+  },
+  "type": "module"
 }
+
