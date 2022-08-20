@@ -5,16 +5,16 @@ $local-gap: calc(40px / 3);
 
 .skills {
   @include sm-min {
-    padding: $gap-sm;
+    padding: 0.625em;
   }
   @include sm {
-    padding: $gap;
+    padding: 1.25em;
   }
 
   &__container {
     display: grid;
 
-    margin-bottom: $gap;
+    margin-bottom: 1.25em;
 
     @include lg-min {
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
@@ -29,10 +29,10 @@ $local-gap: calc(40px / 3);
       grid-template-columns: 1fr 1fr;
     }
     @include sm-min {
-      gap: $gap-sm;
+      gap: 0.625em;
     }
     @include sm {
-      gap: $gap;
+      gap: 1.25em;
       grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
       grid-template-columns: 1fr;
     }
@@ -48,7 +48,7 @@ $local-gap: calc(40px / 3);
   &__actions {
     @extend %btn-container;
     @include sm-min {
-      margin-bottom: $gap-lg;
+      margin-bottom: 1.875em;
     }
   }
 }

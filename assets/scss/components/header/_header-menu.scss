@@ -16,9 +16,8 @@
 
   &__container {
     display: grid;
-
     @extend %container;
-    gap: $gap;
+    gap: 1.25em;
     grid-template-columns: auto 1fr;
   }
 }

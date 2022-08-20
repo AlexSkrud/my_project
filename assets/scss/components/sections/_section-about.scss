@@ -3,29 +3,26 @@
 
 .about {
   letter-spacing: 0.055em;
-
   background-color: $color-gray-light;
-
   @extend %section;
 
   &__container {
     display: grid;
-
     @extend %container;
     @include lg-min {
-      gap: $gap-x5;
+      gap: 6.25em;
       grid-template-columns: 1fr 271px;
     }
     @include lg-md {
-      gap: $gap-x2;
+      gap: 2.5em;
       grid-template-columns: 1fr 271px;
     }
     @include md-sm {
-      gap: $gap;
+      gap: 1.25em;
       grid-template-columns: 1fr 236px;
     }
     @include sm {
-      gap: $gap;
+      gap: 1.25em;
       grid-template-columns: 1fr;
     }
   }
@@ -38,28 +35,24 @@
 
       &:first-of-type {
         position: relative;
-
         margin-top: -5px;
 
         &::after {
           position: absolute;
           top: 0;
-
           width: 2px;
           height: 200px;
-
           content: "";
-
           background-color: rgba($color-gray, 0.1);
 
           @include lg-min {
-            right: -$gap * 2.5;
+            right: -50px;
           }
           @include lg-md {
-            right: -$gap;
+            right: -20px;
           }
           @include md-sm {
-            right: -$gap-sm;
+            right: -10px;
           }
           @include sm {
             display: none;
@@ -76,7 +69,6 @@
   &__picture {
     display: grid;
     align-content: center;
-
     justify-items: center;
 
     img {
