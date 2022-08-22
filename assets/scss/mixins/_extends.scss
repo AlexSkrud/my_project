@@ -1,6 +1,6 @@
 @use "../presets" as *;
 @use "../presets" as *;
-@use "../mixins/mixins-media" as *;
+@use "mixins-media" as *;
 
 %container {
   max-width: $ul;
