@@ -3,10 +3,12 @@
 
 .form {
   padding: 30px 0;
+
   background-color: $color-primary;
 
   &__container {
     display: grid;
+
     @extend %container;
     gap: 20px;
     @include md-min {
@@ -19,6 +21,7 @@
 
   .btn--primary {
     width: 100%;
+
     color: $color-light;
     border-color: rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.2);
@@ -27,6 +30,7 @@
     &:hover,
     &:focus {
       cursor: pointer;
+
       border-color: $color-light;
       background-color: $color-accent;
     }
@@ -47,12 +51,15 @@
     height: 60px;
     padding-right: 30px;
     padding-left: 30px;
+
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
+
     color: $color-light;
     border: 2px solid rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.25);
     background-color: rgba($color-light, 0.05);
+
     font-size: 1.125rem;
 
     &::placeholder {
